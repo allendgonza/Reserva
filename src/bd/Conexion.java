@@ -18,11 +18,16 @@ public class Conexion {
         
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/reservas_hotel", "root", "");
-            System.out.println("Conexion exitosa");
-        } catch (ClassNotFoundException | SQLException e) {
-            System.out.println("Error al conectar: " + e.getMessage());
-        }return conexion;
+            conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/hoteleria", "root", "");
+            System.out.println("Conexión exitosa");
+        } catch (SQLException e) {
+            System.out.println("Error de conexión" + e.getMessage());
+        } catch (Exception ex) {
+            System.out.println(ex.getMessage());
+        }
+        return conexion;
+        
+    
     }
     
 
