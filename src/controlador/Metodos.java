@@ -10,6 +10,10 @@ import java.sql.Connection;
 import java.util.ArrayList;
 import modelo.Habitacion;
 import modelo.Reserva;
+import java.sql.ResultSet;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import javax.swing.JOptionPane;
 
 /**
  *
